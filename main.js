@@ -3,7 +3,7 @@ function inputElement(inputText) {
     const listUnderInput = document.querySelector("#cafeNames");
     listUnderInput.innerHTML = "";
     if (inputText.trim()) { // Findes inputText
-        fetch('http://cafe-project.onrender.com/cafes')
+        fetch('https://cafe-project.onrender.com/cafes')
             .then(response => response.json())
             .then(cafeer => {
                 for (let i = 0; i < cafeer.length; i++) {
