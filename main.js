@@ -3,7 +3,7 @@ function inputElement(inputText) {
     const listUnderInput = document.querySelector("#cafeNames");
     listUnderInput.innerHTML = "";
     if (inputText.trim()) { // Findes inputText
-        fetch('http://localhost:3000/cafes')
+        fetch('http://cafe-project.onrender.com/cafes')
             .then(response => response.json())
             .then(cafeer => {
                 for (let i = 0; i < cafeer.length; i++) {
@@ -24,7 +24,7 @@ console.log()
 button.addEventListener('click', function (event) {
     event.preventDefault();
 
-    fetch('http://localhost:3000/cafeNames')
+    fetch('https://cafe-project.onrender.com/cafeNames')
         .then(response => response.json())
         .then(function (cafeSize) {
             renderCafeSize(cafeSize);
